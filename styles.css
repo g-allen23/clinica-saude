@@ -1,0 +1,876 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --background: #f7fbfc;
+  --primaria: #0ea5a4;
+  --secundaria: #d1fae5;
+  --texto-primario: #0f1724;
+  --texto-secundario: #94a3b8;
+  --borda: #00000014;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--texto-primario);
+}
+
+/* Evita scroll horizontal causado por elementos maiores que a viewport */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Garante que imagens e iframes não excedam a largura do contêiner */
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px;
+  border: 1px solid var(--borda);
+}
+
+header #logo {
+  height: 28px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+header p {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primaria);
+  margin: 0;
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--texto-secundario);
+  margin-right: 20px;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--texto-primario);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+}
+
+#whatsapp {
+  display: flex;
+  justify-content: center;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  margin-right: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  gap: 5px;
+
+  &:hover {
+    background-color: #1ebe5b;
+  }
+
+  &:active {
+    background-color: #128c4a;
+    transform: translateY(1px);
+  }
+}
+
+main #section-main {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  padding: 0 50px;
+  gap: 30px;
+}
+
+/* Make the hero image responsive */
+main #section-main img#clinical-care {
+  flex: 1;
+  width: 45%;
+  max-width: 520px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+main #section-main div #excellent {
+  display: flex;
+  background-color: var(--secundaria);
+  padding: 5px 10px;
+  height: 30px;
+  width: fit-content;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+main #section-main h1 {
+  font-size: 48px;
+  margin: 20px 0;
+  color: var(--texto-primario);
+}
+
+main #section-main .secondary-paragraph {
+  font-size: 18px;
+  color: var(--texto-secundario);
+  margin-bottom: 25px;
+}
+
+main #section-main #first-button {
+  background-color: var(--primaria);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+
+  &:hover {
+    background-color: #0bc0bf;
+  }
+
+  &:active {
+    background-color: #099a99;
+    transform: translateY(1px);
+  }
+}
+
+main #section-main #second-button {
+  background-color: #d8d5d5;
+  color: var(--texto-primario);
+  border: none;
+  padding: 13px 23px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b9b9b9;
+  }
+
+  &:active {
+    background-color: #a7a7a7;
+    transform: translateY(1px);
+  }
+}
+
+main #section-main #clinical-care {
+  border-radius: 20px;
+}
+
+main .service {
+  margin-top: 100px;
+  background-color: var(--secundaria);
+}
+
+main .service #title-service {
+  text-align: center;
+  padding: 50px 0;
+}
+
+main .service #title-service h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: var(--texto-primario);
+}
+
+main .service #title-service p {
+  font-size: 18px;
+  color: var(--texto-secundario);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+main .service #container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 50px 50px 50px;
+}
+
+main .service .contaier-service {
+  background-color: white;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+}
+
+main .service .contaier-service img {
+  background-color: var(--secundaria);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+main .service .contaier-service h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+main .service .contaier-service p {
+  font-size: 16px;
+  color: var(--texto-secundario);
+  line-height: 1.4;
+}
+
+main h2 {
+  font-size: 36px;
+  color: var(--texto-primario);
+  text-align: center;
+  margin-top: 100px;
+}
+
+main .secondary-paragraph:nth-child(4) {
+  font-size: 18px;
+  color: var(--texto-secundario);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+main #advantages {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+}
+
+main #advantages .container-advantages {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+}
+
+main #advantages .container-advantages img {
+  padding: 10px;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+main #advantages .container-advantages h3 {
+  font-size: 20px;
+  color: var(--texto-primario);
+}
+
+main #advantages .container-advantages p {
+  font-size: 16px;
+  color: var(--texto-secundario);
+  line-height: 1.4;
+}
+
+main #patient {
+  padding: 50px;
+  background-color: var(--secundaria);
+}
+
+main #patient h2 {
+  font-size: 36px;
+  margin-top: 50px;
+  color: var(--texto-primario);
+  text-align: center;
+}
+
+main #patient #testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+main #patient .patient-testimonial {
+  width: 300px;
+  height: 60px;
+}
+
+main #patient .container-testimonial .star {
+  height: 70px;
+  width: 70px;
+}
+
+main #patient .container-testimonial .patient-testimonial {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--texto-primario);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+main #patient .container-testimonial div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+main #patient .container-testimonial img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+main #patient .container-testimonial .data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+main #patient .container-testimonial .data .name {
+  font-weight: 600;
+  color: var(--texto-primario);
+}
+
+main #patient .container-testimonial .data p {
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+
+main #on {
+  display: flex;
+  padding: 50px;
+  margin-top: 100px;
+}
+
+main #on #about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-right: 50px;
+}
+
+main #on #about-us h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--texto-primario);
+}
+
+main #on #about-us p {
+  font-size: 18px;
+  color: var(--texto-secundario);
+  margin-top: 25px;
+}
+
+main #on #about-us #statistics {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+main #on #about-us #statistics .numbers {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primaria);
+}
+
+main #on #about-us #statistics .text {
+  margin-top: 0px;
+}
+
+main #on img {
+  flex: 1;
+  border-radius: 10px;
+}
+
+main #location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  padding: 50px 50px;
+  background-color: var(--secundaria);
+}
+
+main #location h2 {
+  font-size: 48px;
+  color: var(--texto-primario);
+}
+
+main #location p {
+  font-size: 18px;
+  color: var(--texto-secundario);
+  margin-bottom: 25px;
+}
+
+main #location .container-location {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 15px;
+}
+
+main #location .container-location .information-adress {
+  text-align: left;
+  padding: 30px;
+}
+
+main #location .container-location .information-adress hr {
+  margin: 30px 0;
+  border: 0.5px solid var(--borda);
+}
+
+main #location .container-location .information-adress .title-adress {
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--texto-primario);
+}
+
+main #location .container-location .information-adress p {
+  font-size: 16px;
+  color: var(--texto-secundario);
+  margin-bottom: 0;
+}
+
+main #location .container-location iframe {
+  flex: 1;
+  height: 500px;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+main #finish {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px auto;
+  padding: 80px 50px;
+  border-radius: 20px;
+  gap: 20px;
+  background-color: var(--primaria);
+  color: white;
+}
+
+main #finish h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+main #finish p {
+  padding: 0px 200px;
+  font-size: 18px;
+}
+
+main #finish button {
+  background-color: white;
+  color: var(--primaria);
+  display: flex;
+  gap: 5px;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: #e0f7f7;
+  }
+
+  &:active {
+    background-color: #d0f0f0;
+    transform: translateY(1px);
+  }
+}
+
+footer {
+  height: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--borda);
+}
+
+footer img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+footer #finish-paragraph {
+  margin-right: 20px;
+  font-size: 18px;
+  color: var(--primaria);
+}
+
+footer p {
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+
+/* Computadores */
+@media (max-width: 1200px) {
+  header p {
+    margin-left: 0;
+    font-size: 17px;
+  }
+  main #section-main {
+    padding: 0 40px;
+    gap: 20px;
+  }
+  main #section-main h1 {
+    font-size: 42px;
+  }
+  main .service #container {
+    padding: 0 30px 30px 30px;
+  }
+  main #advantages {
+    padding: 30px;
+  }
+  main #on {
+    padding: 30px;
+  }
+  main #location {
+    padding: 30px;
+  }
+}
+
+/* Tablets e laptops */
+@media (max-width: 992px) {
+  header {
+    padding: 0 15px;
+  }
+  header p {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  header nav ul {
+    gap: 10px;
+  }
+
+  main #section-main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 30px;
+    margin-top: 50px;
+  }
+  main #section-main h1 {
+    font-size: 36px;
+  }
+  main #section-main .secondary-paragraph {
+    font-size: 16px;
+  }
+
+  /* Make hero image full width and centered on stacked layout */
+  main #section-main img#clinical-care {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+    align-self: center;
+  }
+
+  main .service #container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  main .service .contaier-service {
+    width: calc(50% - 20px);
+  }
+
+  main #patient #testimonials {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  main #on {
+    flex-direction: column;
+  }
+  main #on img {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  main #location .container-location {
+    flex-direction: column;
+  }
+  main #location .container-location iframe {
+    margin: 20px 0 0 0;
+    height: 300px;
+    width: 100%;
+  }
+
+  main #finish {
+    width: 90vw;
+    padding: 60px 30px;
+  }
+  main #finish p {
+    padding: 0 40px;
+  }
+}
+
+/* Telefones maiores / tablets pequenos */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+  }
+
+  header #logo {
+    height: 18px;
+  }
+
+  header p {
+    margin-left: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  main #section-main {
+    padding: 0 20px;
+    gap: 15px;
+  }
+
+  main #section-main h1 {
+    font-size: 32px;
+  }
+
+  main #section-main .secondary-paragraph {
+    font-size: 15px;
+  }
+
+  main #section-main #first-button,
+  main #section-main #second-button {
+    padding: 12px 18px;
+  }
+
+  main .service .contaier-service {
+    width: 100%;
+  }
+
+  main .service .contaier-service:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  main #advantages {
+    gap: 20px;
+    padding: 30px 20px;
+    flex-direction: column;
+  }
+
+  main #patient .container-testimonial img {
+    width: 40px;
+    height: 40px;
+  }
+
+  main #on #about-us h1 {
+    font-size: 36px;
+  }
+
+  main #location {
+    padding: 30px 20px;
+  }
+
+  main #location .container-location iframe {
+    height: 220px;
+  }
+
+  main #finish h1 {
+    font-size: 36px;
+  }
+
+  main #finish p {
+    padding: 0 20px;
+  }
+}
+
+/* Telefones pequenos */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  #whatsapp {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  main #section-main h1 {
+    font-size: 28px;
+  }
+
+  main #section-main .secondary-paragraph {
+    font-size: 14px;
+  }
+
+  main #section-main {
+    padding: 0 16px;
+  }
+
+  /* Small phones: ensure hero image scales and keeps aspect */
+  main #section-main img#clinical-care {
+    width: 100%;
+    max-width: none;
+    margin-top: 16px;
+    height: auto;
+  }
+
+  main .service #container {
+    padding: 0 16px 20px 16px;
+  }
+
+  main #finish {
+    padding: 50px 20px;
+    margin: 50px auto;
+  }
+
+  main #finish p {
+    padding: 0;
+  }
+}
+
+/* Telefones menores */
+@media (max-width: 375px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 10px 12px;
+  }
+
+  header p {
+    font-size: 13px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  main #section-main {
+    margin-top: 40px;
+    gap: 12px;
+  }
+  main #section-main h1 {
+    font-size: 24px;
+  }
+  main #section-main .secondary-paragraph {
+    font-size: 13px;
+  }
+  main #section-main #excellent {
+    margin-bottom: 20px;
+  }
+
+  main .service #container {
+    gap: 16px;
+    padding: 0 12px 20px 12px;
+  }
+  main .service .contaier-service {
+    padding: 20px;
+  }
+
+  main #patient #testimonials {
+    gap: 16px;
+  }
+
+  main #on #about-us h1 {
+    font-size: 28px;
+  }
+
+  main #location .container-location iframe {
+    height: 180px;
+  }
+
+  main #finish {
+    width: 94vw;
+    padding: 40px 16px;
+    margin: 40px auto;
+  }
+  main #finish h1 {
+    font-size: 28px;
+  }
+  main #finish p {
+    padding: 0;
+  }
+
+  footer {
+    height: auto;
+    padding: 16px;
+  }
+}
+
+/* Reveal on scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateX(0);
+  transition:
+    opacity 600ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 600ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.from-left {
+  transform: translateX(-40px);
+}
+.reveal.from-right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    transform: none !important;
+  }
+}
